@@ -27,6 +27,8 @@ app.controller("myNoteCtrl", function($scope) {
 	    	}else{
 	    		$scope.errorMsg = "请选择运算";
 	    	}
+    	}else{
+    		$scope.errorMsg = "请填写数字";
     	}
     };
     $scope.add = function(){
