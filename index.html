@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>hello world</title>
+</head>
+<body>
+<body ng-app="myNoteApp">
+
+<h2>我的计算器</h2>
+
+
+<!--
+	<textarea ng-model="message" cols="40" rows="10"></textarea>
+	<p>剩余字数: <span ng-bind="left()"></span></p>
+	<button ng-click="save()">保存</button>
+	<button ng-click="clear()">清除</button>
+-->
+<div ng-controller="myNoteCtrl">
+<input type="text" id="num1" ng-model="num1"  ng-bind="returnNum()"/>
+<select id="selectBiz" ng-model="biz">
+	<option value="1">+</option>
+	<option value="2">-</option>
+	<option value="3">*</option>
+	<option value="4">/</option>
+</select>
+<input type="text" id="num2" ng-model="num2" />
+=
+<input type="text" id="num3" ng-model="num3"/>
+<p>
+{{ errorMsg }}
+</p>
+</div>
+
+
+<script src="js/myNoteApp.js"></script>
+<script src="js/myNoteCtrl.js"></script>
+</body>
+</html>
